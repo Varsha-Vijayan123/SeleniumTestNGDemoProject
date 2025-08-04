@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-04T10:49:09 IST" name="Default suite" finished-at="2025-08-04T10:49:25 IST" duration-ms="15422">
+    <groups>
+    </groups>
+    <test started-at="2025-08-04T10:49:09 IST" name="Default test" finished-at="2025-08-04T10:49:25 IST" duration-ms="15422">
+      <class name="demopackage.LoginTest">
+        <test-method is-config="true" signature="browserIntialisation()[pri:0, instance:demopackage.LoginTest@1a482e36]" started-at="2025-08-04T10:49:09 IST" name="browserIntialisation" finished-at="2025-08-04T10:49:14 IST" duration-ms="4328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserIntialisation -->
+        <test-method signature="Loginpassccorrect()[pri:0, instance:demopackage.LoginTest@1a482e36]" started-at="2025-08-04T10:49:14 IST" name="Loginpassccorrect" finished-at="2025-08-04T10:49:14 IST" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Loginpassccorrect -->
+        <test-method is-config="true" signature="browserIntialisation()[pri:0, instance:demopackage.LoginTest@1a482e36]" started-at="2025-08-04T10:49:14 IST" name="browserIntialisation" finished-at="2025-08-04T10:49:18 IST" duration-ms="3700" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserIntialisation -->
+        <test-method signature="Loginusercorrect()[pri:0, instance:demopackage.LoginTest@1a482e36]" started-at="2025-08-04T10:49:18 IST" name="Loginusercorrect" finished-at="2025-08-04T10:49:18 IST" duration-ms="367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Loginusercorrect -->
+        <test-method is-config="true" signature="browserIntialisation()[pri:0, instance:demopackage.LoginTest@1a482e36]" started-at="2025-08-04T10:49:18 IST" name="browserIntialisation" finished-at="2025-08-04T10:49:21 IST" duration-ms="2492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserIntialisation -->
+        <test-method signature="loginBothincorrect()[pri:0, instance:demopackage.LoginTest@1a482e36]" started-at="2025-08-04T10:49:21 IST" name="loginBothincorrect" finished-at="2025-08-04T10:49:21 IST" duration-ms="409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginBothincorrect -->
+        <test-method is-config="true" signature="browserIntialisation()[pri:0, instance:demopackage.LoginTest@1a482e36]" started-at="2025-08-04T10:49:21 IST" name="browserIntialisation" finished-at="2025-08-04T10:49:24 IST" duration-ms="2604" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserIntialisation -->
+        <test-method signature="loginbothCorrect()[pri:0, instance:demopackage.LoginTest@1a482e36]" started-at="2025-08-04T10:49:24 IST" name="loginbothCorrect" finished-at="2025-08-04T10:49:25 IST" duration-ms="1126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginbothCorrect -->
+      </class> <!-- demopackage.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
