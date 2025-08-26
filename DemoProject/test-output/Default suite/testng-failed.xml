@@ -5,7 +5,8 @@
     <classes>
       <class name="demopackage.LoginTest">
         <methods>
-          <include name="loginbothCorrect"/>
+          <include name="loginWithValidUsername"/>
+          <include name="quitandClose"/>
           <include name="browserIntialisation"/>
         </methods>
       </class> <!-- demopackage.LoginTest -->

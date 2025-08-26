@@ -1,54 +1,69 @@
 package demopackage;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import java.io.IOException;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pages.LoginPage;
+import utilities.ExcelUtilities;
+
 public class LoginTest extends Base {
-	@Test
-	public void loginbothCorrect() {
-		WebElement username1=driver.findElement(By.xpath("//input[@placeholder='Username']"));
-		String user="admin";
-		username1.sendKeys("admin");
-		WebElement password1=driver.findElement(By.xpath("//input[@placeholder='Password']"));
-		String pass="admin";
-		password1.sendKeys("admin");
-		WebElement signin=driver.findElement(By.xpath("//button[@type='submit']"));
-		signin.click();
+	@Test(priority=1,groups= {"regression"})
+	public void loginWithValidCredentials()throws IOException {
+		//String user="admin";
+		//String pass="admin";
+		String user1=ExcelUtilities.getStringData(1,0,"LoginPage");
+		String pass1=ExcelUtilities.getStringData(1,1,"LoginPage");
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.enterUsername(user1);
+		loginpage.enterPassword(pass1);
+		loginpage.clickSigninButton();
+	boolean isdashboarddisplayed=loginpage.isHomePageLoaded();
+	Assert.assertTrue(isdashboarddisplayed);
 	}
-	@Test
-	public void loginBothincorrect() {
-		WebElement username1=driver.findElement(By.xpath("//input[@placeholder='Username']"));
-		String user="varsha";
-		username1.sendKeys("varsha");
-		WebElement password1=driver.findElement(By.xpath("//input[@placeholder='Password']"));
-		String pass="chinnu";
-		password1.sendKeys("chinnu");
-		WebElement signin=driver.findElement(By.xpath("//button[@type='submit']"));
-		signin.click();
+	@Test(priority=2)
+	public void loginWithInvalidCredentials()throws IOException {
+		//String user="adm";
+		//String pass="chinnu";
+		String user1=ExcelUtilities.getStringData(2,0,"LoginPage");
+		String pass1=ExcelUtilities.getStringData(2,1,"LoginPage");
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.enterUsername(user1);
+		loginpage.enterPassword(pass1);
+		loginpage.clickSigninButton();
+	boolean isalertdisplayed=loginpage.isAlertDisplayed();
+	Assert.assertTrue(isalertdisplayed);
+	}
+	@Test(priority=3)
+	public void loginWithValidUsername()throws IOException {
+		//String user="admin";
+		//String pass="chinnu";
+		String user1=ExcelUtilities.getStringData(3,0,"LoginPage");
+		String pass1=ExcelUtilities.getStringData(3,1,"LoginPage");
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.enterUsername(user1);
+		loginpage.enterPassword(pass1);
+		loginpage.clickSigninButton();
+	boolean isalertdisplayed=loginpage.isAlertDisplayed();
+	Assert.assertTrue(isalertdisplayed);
+	}
+	
+	@Test(priority=4)
+	public void loginWithValidPassword()throws IOException {
+		//String user="adn";
+		//String pass="admin";
+		String user1=ExcelUtilities.getStringData(4,0,"LoginPage");
+		String pass1=ExcelUtilities.getStringData(4,1,"LoginPage");
+		LoginPage loginpage=new LoginPage(driver);
+		loginpage.enterUsername(user1);
+		loginpage.enterPassword(pass1);
+		loginpage.clickSigninButton();
+	boolean isalertdisplayed=loginpage.isAlertDisplayed();
+	Assert.assertTrue(isalertdisplayed);
+	}
+	
 		
-	}
-	@Test
-	public void Loginusercorrect() {
-		WebElement username1=driver.findElement(By.xpath("//input[@placeholder='Username']"));
-		String user="admin";
-		username1.sendKeys("admin");
-		WebElement password1=driver.findElement(By.xpath("//input[@placeholder='Password']"));
-		String pass="chinnu";
-		password1.sendKeys("chinnu");
-		WebElement signin=driver.findElement(By.xpath("//button[@type='submit']"));
-		signin.click();
-	}
-	@Test
-	public void Loginpassccorrect() {
-		WebElement username1=driver.findElement(By.xpath("//input[@placeholder='Username']"));
-		String user="varsha";
-		username1.sendKeys("varsha");
-		WebElement password1=driver.findElement(By.xpath("//input[@placeholder='Password']"));
-		String pass="admin";
-		password1.sendKeys("admin");
-		WebElement signin=driver.findElement(By.xpath("//button[@type='submit']"));
-		signin.click();
-	}
+		
 
 }
